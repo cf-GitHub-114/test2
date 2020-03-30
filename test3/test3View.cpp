@@ -46,7 +46,7 @@ BOOL Ctest3View::PreCreateWindow(CREATESTRUCT& cs)
 
 // Ctest3View 绘制
 
-void Ctest3View::OnDraw(CDC* /*pDC*/)
+void Ctest3View::OnDraw(CDC* pDC)
 {
 	Ctest3Doc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -54,6 +54,8 @@ void Ctest3View::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	CString s1 = _T("不断尝试中");
+	pDC->TextOutW(250, 251, s1);
 }
 
 
